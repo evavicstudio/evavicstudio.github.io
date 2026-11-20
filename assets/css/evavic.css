@@ -1,0 +1,16 @@
+.site-monogram {
+  display: grid;
+  place-items: center;
+  width: clamp(4.5rem, 11vw, 8.5rem);
+  aspect-ratio: 1;
+  color: var(--orange-yellow-crayola);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 600;
+}
+.service-item a, .timeline-item a { color: inherit; position: relative; width: fit-content; }
+.service-item a:hover, .timeline-item a:hover { color: var(--orange-yellow-crayola); }
+.about-text, .service-item-text, .timeline-text { font-size: 1rem; }
+.site-credit { color: var(--light-gray); padding: 0 1rem 5rem; text-align: center; font-size: .875rem; }
+.site-credit a { display: inline; color: var(--orange-yellow-crayola); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--orange-yellow-crayola); outline-offset: 4px; }
+@media (min-width: 580px) { .site-credit { padding-bottom: 2rem; } }
