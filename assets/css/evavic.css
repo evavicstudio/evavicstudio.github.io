@@ -14,3 +14,13 @@
 .site-credit a { display: inline; color: var(--orange-yellow-crayola); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--orange-yellow-crayola); outline-offset: 4px; }
 @media (min-width: 580px) { .site-credit { padding-bottom: 2rem; } }
+
+.service-item .project-link {
+  margin-top: .75rem;
+  color: var(--orange-yellow-crayola);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+#work .service + .service { margin-top: 1.75rem; }

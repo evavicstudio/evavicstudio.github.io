@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="evavic's curated guide to Dan Abramov's public open-source work and writing.">
-  <title>evavic | Open-source portfolio</title>
+  <meta name="description" content="A portfolio of web projects and product concepts by evavic.">
+  <title>evavic | Web projects</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/evavic.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="avatar-box site-monogram" aria-hidden="true">E</div>
         <div class="info-content">
           <h1 class="name">evavic</h1>
-          <p class="title">Open-source portfolio</p>
+          <p class="title">Web projects</p>
         </div>
         <button type="button" class="info_more-btn" data-sidebar-btn aria-controls="sidebar-links" aria-expanded="false" aria-label="Toggle sidebar links">
           <span>Show links</span><b aria-hidden="true">⌄</b>
@@ -30,10 +30,6 @@
             <div class="icon-box" aria-hidden="true">GH</div>
             <div class="contact-info"><p class="contact-title">GitHub</p><a class="contact-link" href="https://github.com/evavicstudio">@evavicstudio</a></div>
           </li>
-          <li class="contact-item">
-            <div class="icon-box" aria-hidden="true">↗</div>
-            <div class="contact-info"><p class="contact-title">Profile source</p><a class="contact-link" href="https://github.com/gaearon">@gaearon</a></div>
-          </li>
         </ul>
       </div>
     </aside>
@@ -43,7 +39,6 @@
         <ul class="navbar-list">
           <li><button type="button" class="navbar-link active" data-nav-link="about" aria-controls="about" aria-current="true">About</button></li>
           <li><button type="button" class="navbar-link" data-nav-link="work" aria-controls="work">Work</button></li>
-          <li><button type="button" class="navbar-link" data-nav-link="writing" aria-controls="writing">Writing</button></li>
           <li><button type="button" class="navbar-link" data-nav-link="contact" aria-controls="contact">Contact</button></li>
         </ul>
       </nav>
@@ -51,51 +46,91 @@
       <article class="about active" id="about" data-page="about">
         <header><h2 class="h2 article-title">About</h2></header>
         <div class="about-text">
-          <p>evavic is an unofficial showcase of Dan Abramov’s public open-source work. The projects and writing featured here are credited to their original authors.</p>
-          <p>Explore React tooling, JavaScript state management, and Dan’s own writing about building software.</p>
+          <p>evavic is a portfolio of web projects and product concepts. Explore a parcel tracker and seven ideas for everyday tools.</p>
         </div>
         <section class="service">
           <h3 class="h3 service-title">Explore the work</h3>
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" width="40" height="40" alt=""></div>
-              <div class="service-content-box"><h4 class="h4 service-item-title">React tooling</h4><p class="service-item-text">Live component updates and drag-and-drop interfaces.</p></div>
+              <div class="service-content-box"><h4 class="h4 service-item-title">Web tools</h4><p class="service-item-text">Practical tools for tracking deliveries and organizing information.</p></div>
             </li>
             <li class="service-item">
               <div class="service-icon-box"><img src="./assets/images/icon-design.svg" width="40" height="40" alt=""></div>
-              <div class="service-content-box"><h4 class="h4 service-item-title">State management</h4><p class="service-item-text">Predictable state updates with Redux.</p></div>
+              <div class="service-content-box"><h4 class="h4 service-item-title">Product concepts</h4><p class="service-item-text">Ideas for planning, budgeting, and sharing information online.</p></div>
             </li>
           </ul>
         </section>
       </article>
 
       <article id="work" data-page="work">
-        <header><h2 class="h2 article-title">Open-source work</h2></header>
-        <section class="timeline">
-          <div class="title-wrapper"><div class="icon-box" aria-hidden="true">GH</div><h3 class="h3">Selected projects</h3></div>
-          <ol class="timeline-list">
-            <li class="timeline-item"><h4 class="h4 timeline-item-title"><a href="https://github.com/reduxjs/redux">Redux</a></h4><span>JavaScript state management</span><p class="timeline-text">An open-source library for predictable state updates, originally created by Dan Abramov and Andrew Clark.</p></li>
-            <li class="timeline-item"><h4 class="h4 timeline-item-title"><a href="https://github.com/gaearon/react-dnd">React DnD</a></h4><span>React interactions</span><p class="timeline-text">Drag-and-drop tools for React, originally created by Dan Abramov.</p></li>
-            <li class="timeline-item"><h4 class="h4 timeline-item-title"><a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a></h4><span>Historical React tooling</span><p class="timeline-text">An earlier tool for editing React components while an app runs. The repository recommends Fast Refresh for current projects.</p></li>
-          </ol>
+        <header><h2 class="h2 article-title">Work</h2></header>
+        <section class="service">
+          <h3 class="h3 service-title">Featured project</h3>
+          <ul class="service-list">
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">China Post Tracker</h4>
+                <p class="service-item-text">Enter a tracking number to look up shipping updates for China Post, EMS, and ePacket parcels. The site also explains tracking statuses and offers guidance on stalled updates, customs, and final delivery.</p>
+                <a class="project-link" href="https://chinaposttracker.com/">Open China Post Tracker</a>
+              </div>
+            </li>
+          </ul>
         </section>
-      </article>
-
-      <article id="writing" data-page="writing">
-        <header><h2 class="h2 article-title">Writing</h2></header>
-        <div class="about-text"><p>Read Dan Abramov’s original writing and public posts.</p></div>
-        <ul class="service-list">
-          <li class="service-item"><div class="service-content-box"><h3 class="h4 service-item-title"><a href="https://danabra.mov/">danabra.mov</a></h3><p class="service-item-text">Dan Abramov’s personal site.</p></div></li>
-          <li class="service-item"><div class="service-content-box"><h3 class="h4 service-item-title"><a href="https://overreacted.io/">Overreacted</a></h3><p class="service-item-text">Essays on React and software development by Dan Abramov.</p></div></li>
-        </ul>
+        <section class="service">
+          <h3 class="h3 service-title">Project concepts</h3>
+          <ul class="service-list">
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Dayboard</h4>
+                <p class="service-item-text">A daily planner that pairs a task list with time blocks so you can see what fits before filling your schedule.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Pantry Notes</h4>
+                <p class="service-item-text">A kitchen inventory organized by use-by date, with a shopping list for staples that are running low.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Pocket Ledger</h4>
+                <p class="service-item-text">A budget tracker that groups expenses by category and shows what remains after upcoming bills.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Trail Notebook</h4>
+                <p class="service-item-text">A field notebook for logging walks, recording route conditions, and saving places worth revisiting.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Shelf Queue</h4>
+                <p class="service-item-text">A reading list that tracks borrowed books, due dates, and what you want to read next.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Neighborhood Noticeboard</h4>
+                <p class="service-item-text">A local noticeboard for community events and announcements, with filters by date and neighborhood.</p>
+              </div>
+            </li>
+            <li class="service-item" data-work-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Repair Log</h4>
+                <p class="service-item-text">A home maintenance journal that keeps service dates, replacement parts, and follow-up tasks with each appliance.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
       </article>
 
       <article id="contact" data-page="contact">
         <header><h2 class="h2 article-title">Contact</h2></header>
-        <div class="about-text"><p>Find evavic on GitHub. For Dan Abramov’s public links, visit his own profile.</p></div>
+        <div class="about-text"><p>Find evavic on GitHub.</p></div>
         <ul class="service-list">
           <li class="service-item"><div class="service-content-box"><h3 class="h4 service-item-title"><a href="https://github.com/evavicstudio">evavic on GitHub</a></h3></div></li>
-          <li class="service-item"><div class="service-content-box"><h3 class="h4 service-item-title"><a href="https://github.com/gaearon">Dan Abramov on GitHub</a></h3></div></li>
         </ul>
       </article>
     </div>
