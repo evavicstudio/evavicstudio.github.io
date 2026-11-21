@@ -71,3 +71,6 @@ h3 { font-size: 1.32rem; }
 .responsibilities { margin: 1rem 0 0; padding-inline-start: 1.35rem; color: var(--muted); }
 .responsibilities li + li { margin-top: .65rem; }
 .responsibilities strong { color: var(--ink); }
+
+.projects-in-progress { grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); }
+.projects-in-progress p + p { margin-top: 1rem; }
