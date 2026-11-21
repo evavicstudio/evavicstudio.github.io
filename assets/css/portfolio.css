@@ -72,5 +72,55 @@ h3 { font-size: 1.32rem; }
 .responsibilities li + li { margin-top: .65rem; }
 .responsibilities strong { color: var(--ink); }
 
-.projects-in-progress { grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); }
-.projects-in-progress p + p { margin-top: 1rem; }
+
+.projects-page .page-head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+  gap: clamp(1.75rem, 5vw, 4.5rem);
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.project-status { margin-bottom: .55rem; color: var(--accent); font-weight: 600; }
+.project-feature-intro > p:not(.project-status) { margin-top: .7rem; color: var(--muted); }
+.project-feature-intro .button { margin-top: 1.25rem; }
+.project-facts { margin: 1.5rem 0 0; }
+.project-facts div { padding-block: .6rem; border-top: 1px solid var(--line); }
+.project-facts dt { font-weight: 600; }
+.project-facts dd { margin: 0; color: var(--muted); }
+.project-story { max-width: 68ch; color: var(--muted); }
+.project-story h3 { color: var(--ink); font-size: 1.125rem; }
+.project-story h3 + p { margin-top: .45rem; }
+.project-story section + section, .project-story p + p { margin-top: 1.1rem; }
+.project-list { border-bottom: 1px solid var(--line); }
+.project-entry { border-top: 1px solid var(--line); }
+.project-entry summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 44px;
+  padding: .85rem .75rem;
+  cursor: pointer;
+  list-style: none;
+}
+.project-entry summary::-webkit-details-marker { display: none; }
+.project-entry summary::after {
+  content: "";
+  flex: 0 0 .55rem;
+  height: .55rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+}
+.project-entry[open] summary::after { transform: rotate(225deg); }
+.project-entry summary:hover, .project-entry[open] summary { background: var(--route-bg); }
+.project-entry summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.project-summary { display: grid; gap: .1rem; }
+.project-summary strong { font-size: 1.125rem; }
+.project-summary span { color: var(--muted); }
+.project-entry .project-story { padding: 1.15rem .75rem 1.5rem; }
+@media (max-width: 48rem) {
+  .project-feature { grid-template-columns: 1fr; }
+}
