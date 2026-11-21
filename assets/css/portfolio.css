@@ -126,6 +126,20 @@ h3 { font-size: 1.32rem; }
 .project-facts dt { font-weight: 600; }
 .project-facts dd { margin: 0; color: var(--muted); }
 .project-story { max-width: 68ch; color: var(--muted); line-height: 1.72; }
+#about-me-title { text-align: center; }
+#about-me .project-story { max-width: none; }
+.about-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  border-radius: .9rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+@media (max-width: 38rem) {
+  .about-photo { aspect-ratio: 16 / 9; }
+}
 .project-story h3 { color: var(--ink); font-size: 1.125rem; }
 .project-story h3 + p { margin-top: .45rem; }
 .project-story section + section, .project-story p + p { margin-top: 1.1rem; }
