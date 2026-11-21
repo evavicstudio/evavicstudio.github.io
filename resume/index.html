@@ -24,48 +24,67 @@
       <article class="concept">
         <h3>Senior Software Architect</h3>
         <p><span aria-label="Company withheld">**</span> · Apr 2025</p>
-        <ul>
-          <li>Design order and fulfillment workflows for multiple customers. Define service boundaries, integrate delivery providers, and make shipment events available to operations teams.</li>
-          <li>Document architecture decisions and rollout steps so engineers can maintain integrations and troubleshoot failed handoffs.</li>
+        <ul class="responsibilities">
+          <li><strong>Order lifecycle.</strong> Define how orders move from creation through dispatch, delivery, and cancellation. Specify which service owns each state change and how other services receive updates.</li>
+          <li><strong>Tenant boundaries.</strong> Keep customer configuration, order data, and access rules scoped to each tenant. Define which settings operations teams can change without a software release.</li>
+          <li><strong>Delivery integrations.</strong> Map provider-specific tracking events to a common status model. Handle repeated, delayed, and out-of-order callbacks so they cannot incorrectly roll back an order status.</li>
+          <li><strong>Operational visibility.</strong> Set up views for orders with missing updates or failed handoffs. Document how support staff can follow an order across systems and when to escalate.</li>
+          <li><strong>Rollout.</strong> Validate provider integrations against sandbox scenarios, enable them for a limited group of tenants, and define rollback steps before expanding access.</li>
         </ul>
       </article>
       <article class="concept">
         <h3>Software Architect</h3>
         <p><span aria-label="Company withheld">**</span> · Apr 2024 – Dec 2024</p>
-        <ul>
-          <li>Design a scheduling service that matches requests with available staff. Define how external systems send events and how those events reach reporting tools.</li>
-          <li>Specify data formats, retry behavior, and monitoring for missing or delayed records.</li>
+        <ul class="responsibilities">
+          <li><strong>Scheduling rules.</strong> Model staff availability, qualifications, working hours, and appointment length. Define how to hold a slot during booking and prevent concurrent requests from reserving it twice.</li>
+          <li><strong>Rescheduling and exceptions.</strong> Specify what happens when an appointment is cancelled, an employee becomes unavailable, or a request arrives outside normal hours.</li>
+          <li><strong>Data integration.</strong> Define event formats for scheduling updates and map incoming records to reporting tables. Establish how corrections and duplicate records are handled.</li>
+          <li><strong>Reliability.</strong> Use bounded retries for temporary failures and keep failed records available for investigation and replay. Monitor for rising queue age and missing reports.</li>
+          <li><strong>Handover.</strong> Document integration contracts, example payloads, and reconciliation procedures for the teams that maintain the system.</li>
         </ul>
       </article>
       <article class="concept">
         <h3>Senior Software Engineer</h3>
         <p><span aria-label="Company withheld">**</span> · Apr 2023 – Mar 2024</p>
-        <ul>
-          <li>Build APIs for payments, refunds, and account balances. Connect payment events to internal records and give support teams a way to trace transactions.</li>
-          <li>Create isolated test environments for billing changes and cover common failure cases with automated tests.</li>
+        <ul class="responsibilities">
+          <li><strong>Payment workflows.</strong> Build APIs for charges, refunds, and account balances. Define how pending, successful, and failed transactions affect what customers and support teams see.</li>
+          <li><strong>Event processing.</strong> Verify payment-provider callbacks, deduplicate repeated events, and link each event to its originating transaction. Handle refunds that settle after the original request.</li>
+          <li><strong>Reconciliation.</strong> Compare internal transaction records with provider reports and surface discrepancies for review. Keep an audit trail for adjustments and refund decisions.</li>
+          <li><strong>Testing.</strong> Exercise partial refunds, duplicate callbacks, timeouts, and subscription renewals in isolated environments before releasing billing changes.</li>
+          <li><strong>Support tooling.</strong> Expose transaction identifiers, status history, and failure reasons so support staff can investigate a payment without direct database access.</li>
         </ul>
       </article>
       <article class="concept">
         <h3>Freelance Software Engineer</h3>
         <p><span aria-label="Company withheld">**</span> · Apr 2021 – Apr 2023</p>
-        <ul>
-          <li>Modernize existing web applications by improving test coverage, tuning slow API endpoints, and simplifying deployments.</li>
-          <li>Write handover notes that explain how to deploy, monitor, and troubleshoot each application.</li>
+        <ul class="responsibilities">
+          <li><strong>Codebase assessment.</strong> Review error logs and deployment steps with each client. Identify the workflows most likely to break and prioritize fixes that the team can maintain after handover.</li>
+          <li><strong>Performance.</strong> Trace slow endpoints to database queries or upstream requests. Remove repeated queries, review query plans, and compare response times before and after changes.</li>
+          <li><strong>Regression coverage.</strong> Add tests around critical workflows before refactoring. Cover authorization rules, validation failures, and integrations that previously needed manual checks.</li>
+          <li><strong>Release automation.</strong> Set up repeatable build and test steps, document required configuration, and prepare a rollback procedure for production deployments.</li>
+          <li><strong>Client handover.</strong> Walk maintainers through the changes, show how to reproduce common failures, and record open issues and their impact on future work.</li>
         </ul>
       </article>
       <article class="concept">
         <h3>Server Architect</h3>
         <p><span aria-label="Company withheld">**</span> · Sep 2017 – Jan 2022</p>
-        <ul>
-          <li>Design backend services for real-time applications. Build reusable deployment tooling and document how teams provision infrastructure and respond to incidents.</li>
-          <li>Create service templates and test harnesses to give new projects a consistent starting point.</li>
+        <ul class="responsibilities">
+          <li><strong>Real-time services.</strong> Define how clients connect, receive updates, and reconnect after interruptions. Decide which data needs immediate delivery and which can be fetched on demand.</li>
+          <li><strong>Service resilience.</strong> Set timeouts and retry limits for calls between services. Plan how to handle traffic spikes and slow downstream systems without exhausting shared resources.</li>
+          <li><strong>Infrastructure.</strong> Package reusable deployment configurations with health checks, environment settings, and resource limits. Document how to provision and verify a new environment.</li>
+          <li><strong>Capacity testing.</strong> Simulate concurrent connections and message bursts to find bottlenecks. Track connection counts, queue delays, and error rates during staged rollouts.</li>
+          <li><strong>Incident response.</strong> Write playbooks for missed updates and interrupted deployments. Define the signals on-call engineers should check before restarting services or rolling back a release.</li>
         </ul>
       </article>
       <article class="concept">
         <h3>Software Engineer</h3>
         <p><span aria-label="Company withheld">**</span> · 2009 – 2017</p>
-        <ul>
-          <li>Develop web APIs, mobile features, and real-time messaging services. Diagnose slow requests, improve database queries, and add automated checks for critical workflows.</li>
+        <ul class="responsibilities">
+          <li><strong>Web APIs.</strong> Implement endpoints for reading and updating application data. Validate requests, enforce permissions, and return errors that clients can handle consistently.</li>
+          <li><strong>Mobile features.</strong> Connect screens to backend services and handle loading, empty, and error states. Verify behavior when network requests time out or connectivity drops.</li>
+          <li><strong>Messaging.</strong> Build workflows for sending and displaying real-time updates. Handle reconnections and prevent duplicate messages from appearing in the interface.</li>
+          <li><strong>Database performance.</strong> Investigate slow requests using logs and query plans. Add indexes where appropriate and remove repeated database calls from frequently used screens.</li>
+          <li><strong>Delivery and maintenance.</strong> Add tests for critical paths, review changes with teammates, and reproduce and resolve defects reported after release.</li>
         </ul>
       </article>
       </div>

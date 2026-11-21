@@ -67,3 +67,7 @@ h3 { font-size: 1.32rem; }
   .featured { grid-template-columns: 1fr; }
   .route-art { border-left: 0; border-top: 1px solid var(--line); }
 }
+
+.responsibilities { margin: 1rem 0 0; padding-inline-start: 1.35rem; color: var(--muted); }
+.responsibilities li + li { margin-top: .65rem; }
+.responsibilities strong { color: var(--ink); }
