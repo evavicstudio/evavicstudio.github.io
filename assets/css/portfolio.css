@@ -200,3 +200,41 @@ h3 { font-size: 1.32rem; }
   .skills-grid { grid-template-columns: 1fr; }
   .resume-timeline { padding-inline-start: 0; border-inline-start: 0; }
 }
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr));
+  gap: .65rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.skill-list li {
+  display: grid;
+  grid-template-rows: 2rem auto;
+  justify-items: center;
+  align-content: center;
+  gap: .45rem;
+  min-height: 5.75rem;
+  padding: .55rem .35rem;
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  background: var(--bg);
+  color: var(--ink);
+  text-align: center;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.skill-list img { display: block; object-fit: contain; }
+.skill-mark {
+  display: grid;
+  place-items: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding-inline: .28rem;
+  border-radius: .35rem;
+  background: var(--route-bg);
+  color: var(--accent);
+  font-size: .75rem;
+}
