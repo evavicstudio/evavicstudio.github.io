@@ -72,6 +72,14 @@ h3 { font-size: 1.32rem; }
 .responsibilities li + li { margin-top: .65rem; }
 .responsibilities strong { color: var(--ink); }
 
+.recommendations-note { margin-bottom: 1.25rem; color: var(--muted); }
+.recommendation blockquote {
+  margin: 1rem 0 0;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: var(--muted);
+}
+
 
 .projects-page .page-head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
 .project-feature {
