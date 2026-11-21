@@ -128,17 +128,22 @@ h3 { font-size: 1.32rem; }
 .project-story { max-width: 68ch; color: var(--muted); line-height: 1.72; }
 #about-me-title { text-align: center; }
 #about-me .project-story { max-width: none; }
-.about-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 1;
-  object-fit: cover;
-  border-radius: .9rem;
-  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+.about-illustration {
+  margin: 0 auto clamp(1.25rem, 3vw, 2rem);
+  text-align: center;
 }
-@media (max-width: 38rem) {
-  .about-photo { aspect-ratio: 16 / 9; }
+.about-illustration img {
+  display: block;
+  width: min(100%, 20rem);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: var(--route-bg);
+}
+.about-illustration figcaption {
+  margin-top: .65rem;
+  color: var(--muted);
+  font-size: .875rem;
 }
 .project-story h3 { color: var(--ink); font-size: 1.125rem; }
 .project-story h3 + p { margin-top: .45rem; }
