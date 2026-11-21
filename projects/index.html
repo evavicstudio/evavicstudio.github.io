@@ -12,7 +12,7 @@
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header shell">
     <a class="brand" href="../" aria-label="evavic home"><span aria-hidden="true">e.</span> evavic</a>
-    <nav aria-label="Main navigation"><a href="../">Home</a><a href="../#about">About</a><a href="../projects/" aria-current="page">Projects</a><a href="../resume/">Resume</a><a href="../contact/">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="../projects/" aria-current="page">Projects</a><a href="../resume/">Resume</a><a href="../contact/">Contact</a></nav>
   </header>
   <main class="shell projects-page" id="content">
     <section class="page-head"><h1>Projects</h1><p class="lede">A live parcel tracking tool and projects in progress for online shopping and e-commerce.</p></section>
@@ -37,62 +37,62 @@
     <section class="block" aria-labelledby="in-progress">
       <h2 id="in-progress">Projects in Progress</h2>
       <div class="project-list">
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Parcel Events API</strong><span>Multi-carrier tracking and webhooks</span></span></summary>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Parcel Events API</h3><p>Multi-carrier tracking and webhooks</p></header>
           <div class="project-story">
             <p>A parcel tracking API for developers who need to show shipment progress without building a separate integration for each carrier. The API is designed to accept a tracking number, return a chronological event feed, and expose a small set of consistent statuses across carriers. Responses would include the original carrier message alongside the normalized status, giving a customer support team enough context to explain an unusual scan without guessing what it means.</p>
             <p>The design keeps the time reported by the carrier separate from the time an event was received. That distinction matters when a scan arrives late, a parcel crosses time zones, or a shipment changes hands between carriers. Carrier adapters would map location, timestamp, and event details into a shared schema. If the data is ambiguous, the response would say so and retain the carrier event rather than assigning a more precise status than the evidence supports.</p>
             <p>The first milestone is a documented lookup endpoint, sample payloads, and a small set of adapters tested against representative tracking histories. Later work would add signed webhook delivery, retry rules, and an option to replay missed events. A sandbox would let merchants test split shipments, duplicate scans, and handoffs without waiting for real parcels. The target is a tracking feed that merchants can explain to customers and developers can debug when upstream data changes.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Delivery Desk</strong><span>Shipment exceptions for merchant support</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Delivery Desk</h3><p>Shipment exceptions for merchant support</p></header>
           <div class="project-story">
             <p>Delivery Desk is an exception queue designed for small online stores that currently look up delayed shipments one at a time. The proposed dashboard groups orders that may need attention by the reason they appeared, such as a missed delivery estimate, a failed delivery attempt, a return to sender, or an extended gap between carrier scans. Each case would show the last confirmed event, the promised delivery window, and the evidence behind the alert.</p>
             <p>Different routes need different thresholds. A domestic parcel that misses an expected scan may be worth checking quickly, while an international shipment in customs can legitimately go longer without an update. The first version would let merchants define basic policies by carrier and shipment type and temporarily snooze a case until a chosen review date. A shared activity log would let another support agent see who contacted the carrier, what they learned, and when the customer should hear back.</p>
             <p>The prototype would start with imported orders and tracking events. The main tests would cover split orders, tracking numbers corrected after dispatch, and parcels whose status changes after a case was closed. Later work would add optional customer update templates and reports on recurring exceptions by route. The goal is to help teams decide which shipment to investigate first and keep the next action visible until the case is resolved.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Checkout Cost Compare</strong><span>Price, shipping, and import cost comparison</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Checkout Cost Compare</h3><p>Price, shipping, and import cost comparison</p></header>
           <div class="project-story">
             <p>Checkout Cost Compare is a shopping research tool for comparing what a purchase will cost by the time it reaches the buyer. A low product price can be offset by shipping, a minimum order threshold, or charges collected later. The proposed interface would line up the item price, shipping charge, applicable discount, and any taxes or import costs the seller has disclosed. Each total would show which inputs were confirmed and which still depend on the destination or final checkout.</p>
             <p>The comparison would be built around a specific product variant and quantity. A shopper could record size, color, package count, and seller terms before comparing offers. Delivery estimates and return windows would appear next to the price so a buyer can decide whether a cheaper offer is worth a longer wait or a more restrictive return policy. Each saved quote would include the time it was recorded, which helps when revisiting prices after a promotion ends.</p>
             <p>The first milestone is a manual comparison workspace that lets users enter offers and return to them later. That provides a useful way to test the comparison rules before relying on automated imports. Later work would focus on recognizing common listing formats, handling currency conversion with a visible rate date, and identifying expired quotes. Tests would cover discounts that only apply above a threshold and variants with different shipping fees.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Return Route</strong><span>Returns from request to refund</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Return Route</h3><p>Returns from request to refund</p></header>
           <div class="project-story">
             <p>Return Route is a proposed returns workspace for online stores that need to follow a request from the first customer message through warehouse review and refund. It would give shoppers a clear view of the next step, including whether they need to mail an item, wait for inspection, or confirm an exchange. For merchants, the same case record would organize order lines, return reasons, label information, parcel events, and notes from warehouse and support staff.</p>
             <p>The workflow would support partial returns, separate parcels for one order, and different outcomes for items in the same package. An item could be approved for a refund while another is still being inspected. Carrier delivery and warehouse receipt would be recorded separately, helping teams identify whether a parcel is pending intake or has already been checked. Operators would see why a case is blocked and which team can move it forward.</p>
             <p>The first milestone would cover return requests, label details, receipt confirmation, and a review step before a refund is recorded. The project would test missing labels, parcels delivered to the wrong intake location, and late carrier events. A later version could summarize which products are frequently returned for the same reason, helping merchants decide whether to improve a product description, update sizing guidance, or look more closely at a recurring quality issue.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Storefront Stock Watch</strong><span>Inventory across storefronts</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Storefront Stock Watch</h3><p>Inventory across storefronts</p></header>
           <div class="project-story">
             <p>Storefront Stock Watch is a proposed monitoring tool for merchants who sell the same inventory through several storefronts and marketplaces. A product can appear available on one channel after another channel has sold the last unit. The tool would give operators a single view of recently reported stock by SKU and show which sources are newer or older. Merchants could set a low stock threshold and see where a discrepancy is large enough to investigate.</p>
             <p>The design would keep a stable internal product identity while mapping channel listings and variant identifiers to it. It would account for cases where marketplaces refer to the same color or size using different names. Bundles would have a separate rule that checks the components needed to fulfill each unit. Inventory feeds would show their last successful update time so an operator can distinguish a legitimate zero balance from a delayed or failed import.</p>
             <p>The first release would be an observation tool with a review queue and an export of mismatched records. Merchants could validate mapping decisions and stock rules before giving an integration permission to update any channel. Later work could add automated stock reconciliation, with a preview of the proposed changes and an audit trail of what was applied. Test cases would include discontinued variants, reserved units, and changes that arrive out of order.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Post-Purchase Inbox</strong><span>Order updates and return reminders</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Post-Purchase Inbox</h3><p>Order updates and return reminders</p></header>
           <div class="project-story">
             <p>Post-Purchase Inbox is a proposed personal dashboard for shoppers who want a single place to find confirmations, tracking updates, and return deadlines. Purchases from several stores often arrive as a mix of emails, account notifications, and carrier links. The dashboard would turn those fragments into an order timeline that connects the seller, the items purchased, and the parcels carrying them. Shoppers could check what still needs action and keep useful records after delivery.</p>
             <p>The design would start with manually added orders and optional forwarding of individual confirmation messages. It would ask the shopper to review information extracted from a forwarded message before saving it, especially when a confirmation includes several items or addresses. The data model would allow one order to have multiple shipments and would show which items still lack tracking information. Return reminders would use dates confirmed by the shopper or clearly stated in the saved material.</p>
             <p>The first milestone would cover an order list, parcel status history, and reminders for approaching return deadlines. Users could export or delete their saved records. Later work would explore aligning messages from the same order, recognizing shipment splits, and reducing duplicate alerts when several services report the same event. The project would test whether people can reliably answer three questions from the dashboard: what has arrived, what is still in transit, and which decisions need to be made soon.</p>
           </div>
-        </details>
-        <details class="project-entry">
-          <summary><span class="project-summary"><strong>Fulfillment Pulse</strong><span>Shipping and fulfillment analytics</span></span></summary>
+        </article>
+        <article class="project-entry">
+          <header class="project-summary"><h3>Fulfillment Pulse</h3><p>Shipping and fulfillment analytics</p></header>
           <div class="project-story">
             <p>Fulfillment Pulse is a proposed analytics workspace for e-commerce teams that want to understand how long orders spend at each stage after checkout. A single delivery average can hide differences between warehouses, shipping methods, and destinations. The dashboard would break the timeline into order processing, time to first carrier scan, transit time, and final delivery. Teams could compare those measures over time and open the underlying shipment records when a change needs investigation.</p>
             <p>The project would define which timestamps count toward each measure and show how many shipments have enough information to be included. For example, a shipping label timestamp and a carrier acceptance scan answer different questions. Orders with missing scans would appear in a coverage summary rather than silently distorting the results. The workspace would also keep the delivery promise recorded at checkout, giving teams a consistent basis for measuring whether a shipment arrived on time.</p>
             <p>The first milestone is a weekly report built from order exports and shipment histories. It would include a breakdown by fulfillment location and shipping method and a list of records that could not be matched. Later work could add scheduled ingestion and alerts when transit time or scan coverage shifts materially. The intended workflow is to start with a measurable change, open several representative orders, and decide whether the next step belongs with the warehouse, the carrier, or the storefront team.</p>
           </div>
-        </details>
+        </article>
       </div>
     </section>
   </main>
